@@ -58,3 +58,12 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+/MrARtist/Library
+/MrARtist/Logs
+/MrARtist/obj
+/MrARtist/.vsconfig
+/MrARtist/Assembly-CSharp.csproj
+/MrARtist/InitCodeMarker
+/MrARtist/MrARtist.sln
+/MrARtist/.vs
+/MrARtist/UserSettings
