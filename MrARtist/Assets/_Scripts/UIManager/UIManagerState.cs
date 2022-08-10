@@ -27,6 +27,14 @@ public class UIManagerState : SimpleState
     public override void Start()
     {
         base.Start();
+        gameObject.SetActive(false);
+    }
+
+    public override void OnEnter()
+    {
+        base.OnEnter();
+
+        gameObject.SetActive(true);
     }
 
     public override void OnUpdate()
@@ -40,5 +48,6 @@ public class UIManagerState : SimpleState
     {
         base.OnExit();
         m_canvasGroup.alpha = 0f;
+        gameObject.SetActive(false);
     }
 }
