@@ -80,6 +80,8 @@ public class AnchorCreator : MonoBehaviour
                 // Stores the anchor so that it may be removed later.
                 m_AnchorPoints.Add(anchor);
             }
+
+            this.enabled = false;
         }
     }
 
