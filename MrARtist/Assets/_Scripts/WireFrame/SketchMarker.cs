@@ -7,12 +7,14 @@ public class SketchMarker : MonoBehaviour
     // Public //
     public GameObject[] m_sketches;
     public int m_current = 0;
+    public Canvas m_3dCanvas;
     // Protected //
     // Private //
     // Access //
 
     void Start()
     {
+        m_3dCanvas.worldCamera = CameraRenderTexture.Instance.m_mainCamera;
         EnableCurrent();
     }
 
@@ -33,14 +35,16 @@ public class SketchMarker : MonoBehaviour
         m_sketches[m_current].SetActive(true);
     }
 
+    [ContextMenu("pre")]
     public void PreviousButton()
     {
         m_current--;
-        LimitCurrent();
+        EnableCurrent();
     }
+    [ContextMenu("Next")]
     public void NextBUtton()
     {
         m_current++;
-        LimitCurrent();
+        EnableCurrent();
     }
 }

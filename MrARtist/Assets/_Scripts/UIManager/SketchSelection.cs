@@ -14,7 +14,8 @@ public class SketchSelection : MonoBehaviour
     public enum SketchType
     {
         WireFrame,
-        Sketch
+        Sketch,
+        Draw
     }
 
     void Start()

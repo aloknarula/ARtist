@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
@@ -16,12 +17,19 @@ public class AnchorCreator : MonoBehaviour
 {
     // This is the prefab that will appear every time an anchor is created.
     [SerializeField]
-    GameObject m_AnchorPrefab;
+    GameObject [] m_AnchorPrefab;
 
+    /*
     public GameObject AnchorPrefab
     {
         get => m_AnchorPrefab;
         set => m_AnchorPrefab = value;
+    }
+    */
+
+    public void Reload()
+    {
+        SceneManager.LoadScene(0);
     }
 
     // Removes all the anchors that have been created.
@@ -69,8 +77,9 @@ public class AnchorCreator : MonoBehaviour
             // This prefab instance is parented to the anchor to make sure the position of the prefab is consistent
             // with the anchor, since an anchor attached to an ARPlane will be updated automatically by the ARAnchorManager as the ARPlane's exact position is refined.
             var anchor = m_AnchorManager.AttachAnchor(hitPlane, hitPose);
-            Instantiate(m_AnchorPrefab, anchor.transform);
+            GameObject go = Instantiate(m_AnchorPrefab[(int)SketchSelection.SketchTypeKyaHai], anchor.transform);
 
+            go.SetActive(true);
             if (anchor == null)
             {
                 Debug.Log("Error creating anchor.");
