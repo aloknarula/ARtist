@@ -1195,7 +1195,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 4.5e-44, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1, y: 0, z: 0, w: 1}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2482,7 +2482,7 @@ PrefabInstance:
     - target: {fileID: 6758550762703709745, guid: 022aa128cbe5b0940823390bd59a6b39,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5222222
+      value: 0.48888892
       objectReference: {fileID: 0}
     - target: {fileID: 6758550762703709745, guid: 022aa128cbe5b0940823390bd59a6b39,
         type: 3}
@@ -2492,12 +2492,12 @@ PrefabInstance:
     - target: {fileID: 6758550762703709745, guid: 022aa128cbe5b0940823390bd59a6b39,
         type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5222222
+      value: 0.48888892
       objectReference: {fileID: 0}
     - target: {fileID: 8972086537391851631, guid: 022aa128cbe5b0940823390bd59a6b39,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5222222
+      value: 0.48888892
       objectReference: {fileID: 0}
     - target: {fileID: 8972086537391851631, guid: 022aa128cbe5b0940823390bd59a6b39,
         type: 3}
@@ -2517,6 +2517,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WireframeMarker
+      objectReference: {fileID: 0}
+    - target: {fileID: 8893744923309237626, guid: d0ce0ea5c64d1074e82220c2ef92dd08,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8893744923309237627, guid: d0ce0ea5c64d1074e82220c2ef92dd08,
         type: 3}
