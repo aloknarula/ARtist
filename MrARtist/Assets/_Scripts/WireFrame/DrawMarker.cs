@@ -17,6 +17,11 @@ public class DrawMarker : MonoBehaviour
     {
         
         m_3dCanvas.worldCamera = CameraRenderTexture.Instance.m_mainCamera;
+
+        Vector3 camVec = transform.position - CameraRenderTexture.Instance.m_camera.transform.position;
+        camVec.y = 0f;
+
+        transform.LookAt(transform.position - camVec.normalized);
     }
 
     public void OnValueChange(float value)

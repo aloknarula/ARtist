@@ -16,6 +16,11 @@ public class SketchMarker : MonoBehaviour
     {
         m_3dCanvas.worldCamera = CameraRenderTexture.Instance.m_mainCamera;
         EnableCurrent();
+
+        Vector3 camVec = transform.position - CameraRenderTexture.Instance.m_camera.transform.position;
+        camVec.y = 0f;
+
+        transform.LookAt(transform.position - camVec.normalized);
     }
 
     private void LimitCurrent()
